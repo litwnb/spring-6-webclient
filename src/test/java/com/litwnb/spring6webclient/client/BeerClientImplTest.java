@@ -18,7 +18,7 @@ class BeerClientImplTest {
         AtomicBoolean atomicBoolean = new AtomicBoolean(false);
 
         client.listBeerDtos().subscribe(dto -> {
-            System.out.println(dto);
+            System.out.println(dto.getBeerName());
             atomicBoolean.set(true);
         });
 
